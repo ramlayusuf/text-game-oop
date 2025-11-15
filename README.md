@@ -39,3 +39,9 @@ Poisonous areas where an antidote must be used within the next few moves or the 
 A similar dragon encounter.
 Multiple items and tools needed to solve the puzzles and reach the final room.
 When all rooms are explored the player needs to find a treasure chest and escape to win.
+
+Building and Running:
+You can compile and run the game using the following command:
+./run.sh
+If you get a permission error, make the script executable:
+chmod +x run.sh
