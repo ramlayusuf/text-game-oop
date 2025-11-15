@@ -1,0 +1,58 @@
+player:player 1
+map:r1
+win:treasure
+score:jewellery,30,false
+score:treasure,50,false
+health:r8,e8s,-1
+health:r9,e9s,-2
+    room:r1,Entrance,You are in the entrance. A huge painting is up on the wall and a safe sits in the corner.,false
+        equipment:i1k,key,A shiny silver key - it must be for a silver lock somewhere,true,open the silver lock,c10c,i10t,You use the silver key to unlock the chest! In it you find the treasure... thousands of gold coins!
+        container:c1s,safe,A locked titanium safe,false
+        equipment:e1s,sword,A basket-hilted sword,true,slay the dragon,f9d,e9s,You slay the dragon! You find a trap-door beneath it!
+        exit:e1e,east,A door to the east,r2,false
+        feature:f1p,painting,A painting of the owner of the mansion hangs on the wall. Why is it completely stuck to the wall. Could there be something behind it?,false
+     room:r2,Cafeteria, The distant aroma of food wafts towards you... this place is already getting into your head. To your south you see the door leading into the kitchen. A sign points towards a Restroom somewhere to your east.,false
+        exit:e2s,south,A door to the kitchen,r3,false
+        exit:e2e,east,A door to the restroom,r4,false
+        exit:e2w,west,A door to the entrance,r1,false
+        item:i2r,recipe-book,A recipe-book containing 100 dessert recipes,false
+    room:r3,Kitchen,The kitchen still feels hot, as if the stove has just been on. It must be in your head... right? Looking around you don't notice anything out of the ordinary, there is a cabinet and a stove, just like all kitchens have.,false
+        feature:f3s,stove,You look around the stove but find nothing out of the ordinary,false
+        equipment:e3c,crowbar,Crowbar... an odd tool to find in a kitchen cabinet. This would be useful to pry two things apart.,false,pry the painting off the wall,f1p,e1s,There is a sword screwed onto the wall behind the painting!
+        exit:e3n,north,A door to the cafeteria,r2,false
+        exit:e3s,south,A door to the master-bedroom,r6,false
+        item:i3l,lemon-juice,lemon-juice... a useful ingredient to make drinks,false,true,antidote,The antidote cures the poison. Enter 'use antidote' to drink the antidote,You have cured the posion!,,e8s,You can now move further down through the door at the bottom of the stairwell!
+    room:r4,Restroom,You see a sink and a hook to the right with scissors hanging on it. Gusts of cold wind hit you as you notice an open door to your north... this isn't the door you walked in through,false
+        feature:f4s,sink,A fancy marble sink,false
+        exit:e4w,west,A door to the cafeteria,r2,false
+        exit:e4e,east,A door to the terrace,r5,false
+        equipment:e4s,scissors,These scissors could be useful to cut something,false,cutting eevanium-leaves off the vines...,i5e,e5e,The eevanium-leaves fall onto the floor so you now get them.
+        equipment:e4sd,screwdriver,A screwdriver that can unscrew things,false,Unscrew the screws in the vent,f6v,i6j,You unscrew the vent and find jewellery lying inside!
+    room:r5,Terrace,You step outside with the cold biting at your fingers and nose. The railing is covered in vines growing over it.,false
+        exit:e5w,west,A door to the restroom,r4,false
+        item:i5e,vines,The vines are covered in eevanium-leaves... maybe you can cut the vines to get the leaves...,false
+        item:e5e,eevanium-leaves,Eevanium-leaves are a common antidote for many forms of poison. They must be added to a drink to make the antidote.,true,true,antidote,The antidote cures the poison. Enter 'use antidote' to drink the antidote,You have cured the posion!,,e8s,You can now move further down through the door at the bottom of the stairwell!
+    room:r6,Master-Bedroom,A cold breeze blows into the bedroom through an open window. It is a regular bedroom with a bedside table and vents towards the ceiling and a cupboard.,false
+        feature:f6b,bedside table,The bedside table has a flashlight on it,false
+        feature:f6v,vents,The vents are screwed onto the wall,false
+        item:i6j,jewellery,Valuable gold jewellery,true
+        equipment:e6f,flashlight,A flashlight to see dark spaces,false,reveal a hidden door in the walk in closet,f7d,e7c,A code is engraved onto the wall. Get code to take note of it on your hand so you have it stored on you.
+        exit:e6n,north,A door to the kitchen,r3,false
+        exit:e6w,west,A door to the walk in closet,r7,false
+    room:r7,Walk-in-closet,The walk in closet is dark. You feel something engraved into its wall. You will need a flashlight to look at it.,false
+        feature:f7d,darkness,Darkness engulfs the room. You will need to use a flashlight on the darkness to look around,false
+        equipment:e7c,code,A 6-digit code,true,Unlock the safe,c1s,i1k,Entering the code into the safe unlocks it! Inside lies a silver key!
+        exit:e7s,south,A door leading to a stairwell,r8,false
+        exit:e7e,east,A door to the master-bedroom,r6,false,
+    room:r8,Stairwell,There are steps leading downstairs... your footsteps echo... THUD!... every step you take. You feel your head getting heavier... your eyelids drooping. It must be some poisounous gas in the air. You need the antidote: Eevanium blended into lemon-juice. You can't move down without using the antidote on the poison. Every command you make while in this room is decreasing your health by ❤️,false
+        feature:f8p,poison,The poisounous gas in the air leaves poison in your system,false
+        exit:e8s,south,A door leading to the basement,r9,true
+        exit:e8n,north,A door leading to the walk in closet,r7,false
+    room:r9,Basement,You have come downstairs into a musty dark basement. There is a large dragon in the middle of the basement.,false
+        feature:f9d,dragon,The dragon was sleeping in the middle of the basement. It is waking up now. Every command you make is decreasing your health by ❤️❤️,false
+        exit:e9s,south,A trapdoor leading to the dungeons under the mansion,r10,true
+        exit:e9n,north,A door to the stairwell,r8,false
+    room:r10,Dungeon,You see a chest in the middle of the dungeon,true
+        exit:e10n,north,The trapdoor back to the basement,r9,false
+        container:c10c,chest,A chest with a silver lock on it,false
+        item:i10t,treasure,Thousands of gold coins,true
